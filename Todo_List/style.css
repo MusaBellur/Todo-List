@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, #360033, #0b8793);
+    font-family: cursive;
+}
+
+header h1{
+    color: white;
+    margin: 4rem;
+    font-size: 4rem;
+}
+
+header,
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    position: relative;
+}
+
+.search{
+    display: flex;
+}
+
+form button,
+form input{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: white;
+    outline: none;
+}
+
+form input{
+    cursor: text;
+}
+
+button{
+    cursor: pointer;
+}
+
+form button{
+    color: white;
+    background-color: #3f0041;
+    transition: all, 0.1 ease;
+}
+
+form button:hover{
+    color: #340036;
+    background-color: white;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    
+    width: 8rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background-color: #3f0041;
+    color: white;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    transition: all, 0.1 ease;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.select:hover:after{
+    color: #3f0041;
+    background-color:white ;
+}
+
+.todo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list{
+    min-width: 38%;
+    list-style: none;
+}
+
+.todo{
+    margin: 0.5rem;
+    background-color: white;
+    color: #3f0041;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s all ease;
+}
+
+.complated{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.complated-btn,
+.trash-btn{
+    color: white;
+    background-color: green;
+    transition: all, 0.1 ease;
+    padding: 0.4rem;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+}
+
+.trash-btn{
+    background-color: red;
+}
+
+.complated-btn:hover,
+.trash-btn:hover{
+    color: green;
+    background-color: white;
+}
+
+.trash-btn:hover{
+    color: red;
+}
+
+.fa-check-circle,
+.fa-minus-circle{
+    pointer-events: none;
+}
+
+.todo-item{
+    font-size: 1.5rem;
+}
+
+.alert-wrapper{
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    
+}
+.alert-success,
+.alert-warning{
+    font-size: 1rem;
+    color: white;
+    width: 25rem;
+    background-color: rgb(0, 121, 0);
+    padding: 0.3rem;
+    text-align: center;
+    display: none;
+}
+
+.alert-warning{
+    background-color: rgb(195, 2, 2);
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(360deg);
+    opacity: 0;
+}
